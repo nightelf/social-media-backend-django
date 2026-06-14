@@ -2,9 +2,9 @@
 
 Django + Django REST Framework implementation of the shared social-media API. One of two
 interchangeable backends — it satisfies the same
-[API contract](../social-media-deploy/API_CONTRACT.md) as `social-media-backend-fastapi`.
+[API contract](https://github.com/nightelf/social-media-deploy/blob/main/API_CONTRACT.md) as `social-media-backend-fastapi`.
 
-> For the full-stack local setup, see the **[deploy repo README](../social-media-deploy/README.md)**.
+> For the full-stack local setup, see the **[deploy repo README](https://github.com/nightelf/social-media-deploy/blob/main/README.md)**.
 > This file covers running the Django backend on its own.
 
 ## Stack
@@ -22,6 +22,7 @@ apps/
 
 ## Run standalone (outside Docker)
 ```bash
+git clone git@github.com:nightelf/social-media-backend-django.git && cd social-media-backend-django
 cp .env.example .env                 # set DATABASE_URL to a reachable Postgres (db: social_django)
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
@@ -39,7 +40,7 @@ python manage.py runserver 0.0.0.0:8000
 | `python manage.py createsuperuser` | Create an admin user |
 
 ## Endpoints
-- API under `/api/` (see the [contract](../social-media-deploy/API_CONTRACT.md))
+- API under `/api/` (see the [contract](https://github.com/nightelf/social-media-deploy/blob/main/API_CONTRACT.md))
 - Swagger UI: `/docs/` · schema: `/schema/`
 - Django admin: `/admin/` (seed creates `admin` / `admin`)
 
