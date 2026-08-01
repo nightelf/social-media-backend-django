@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # local
     "apps.users",
     "apps.posts",
+    "apps.notifications",
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,7 @@ ASGI_APPLICATION = "config.asgi.application"
 DATABASES = {"default": env.db("DATABASE_URL")}
 
 AUTH_USER_MODEL = "users.User"
+POST_MODEL = "posts.Post"
 
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
