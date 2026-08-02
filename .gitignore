@@ -9,4 +9,4 @@ staticfiles/
 media/
 .idea/
 venv/
-.venv/
+.venv/.pytest_cache/
