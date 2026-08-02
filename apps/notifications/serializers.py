@@ -16,3 +16,7 @@ class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notification
         fields = ['id', 'actor', 'type', "post_id", 'seen_at', 'read_at', 'created_at']
+
+
+class MarkReadInputSerializer(serializers.Serializer):
+    notification_id = serializers.IntegerField()
